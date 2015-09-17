@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MetroFramework;
-using MetroFramework.Components;
 using MetroFramework.Controls;
 
 namespace LMDb
@@ -15,6 +10,23 @@ namespace LMDb
     class ViewControl : MetroTabControl
     {
         private const int TCM_ADJUSTRECT = 0x1328;
+        
+        private List<int> l = new List<int>();
+
+        public ViewControl()
+        {
+            if (!DesignMode)
+            {
+                SetDefaults();
+            }
+        }
+
+        private void SetDefaults()
+        {
+            Appearance = TabAppearance.FlatButtons;
+            ItemSize = new Size(0, 1);
+            SizeMode = TabSizeMode.Fixed;
+        }
 
         protected override void WndProc(ref Message m)
         {

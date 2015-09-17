@@ -21,7 +21,7 @@ namespace LMDb
             get { return _text; }
             set
             {
-                label1.Text = value;
+                lblInfo.Text = value;
                 _text = value;
             }
         }

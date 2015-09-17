@@ -18,8 +18,8 @@ namespace LMDb
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            MetroStyleManager.Default.Theme = MetroThemeStyle.Dark;
-            MetroStyleManager.Default.Style = MetroColorStyle.Purple;
+            MetroStyleManager.Default.Theme = Properties.Settings.Default.Theme;
+            MetroStyleManager.Default.Style = Properties.Settings.Default.Style;
             Application.Run(new MainForm());
         }
     }

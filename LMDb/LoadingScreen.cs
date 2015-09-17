@@ -16,44 +16,35 @@ namespace LMDb
         public override string Text
         {
             get { return base.Text; }
-            set { metroLabel1.Text = value; base.Text = value; }
+            set { mlblText.Text = value; base.Text = value; }
         }
-
-        private string _subText { get; set; }
 
         public string SubText
         {
-            get { return _subText; }
-            set { _subText = value;}
+            get { return mlblSubText.Text; }
+            set { mlblSubText.Text = value;}
         }
 
         public int Value
         {
-            get { return metroProgressSpinner1.Value; }
+            get { return mpsLoading.Value; }
             set
             {
-                value = value > this.metroProgressSpinner1.Maximum ? metroProgressSpinner1.Maximum : value;
-                value = value < this.metroProgressSpinner1.Minimum ? metroProgressSpinner1.Minimum : value;
-                metroProgressSpinner1.Value = value;
+                value = value > this.mpsLoading.Maximum ? mpsLoading.Maximum : value;
+                value = value < this.mpsLoading.Minimum ? mpsLoading.Minimum : value;
+                mpsLoading.Value = value;
             }
         }
 
         public bool Spinning
         {
-            get { return metroProgressSpinner1.Spinning; }
-            set { metroProgressSpinner1.Spinning = value; }
+            get { return mpsLoading.Spinning; }
+            set { mpsLoading.Spinning = value; }
         }
 
         public LoadingScreen()
         {
             InitializeComponent();
-            subTextUpdateTime.Start();
-        }
-
-        private void subTextUpdateTime_Tick(object sender, EventArgs e)
-        {
-            if (metroLabel2.Text != _subText)
-                metroLabel2.Text = _subText;
         }
     }
 }

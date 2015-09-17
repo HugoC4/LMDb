@@ -28,93 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.subTextUpdateTime = new System.Windows.Forms.Timer(this.components);
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tlpCenteringTable = new System.Windows.Forms.TableLayoutPanel();
+            this.mpsLoading = new MetroFramework.Controls.MetroProgressSpinner();
+            this.mlblSubText = new MetroFramework.Controls.MetroLabel();
+            this.mlblText = new MetroFramework.Controls.MetroLabel();
+            this.tlpCenteringTable.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // tlpCenteringTable
             // 
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.metroProgressSpinner1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel2, 0, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 96F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(256, 256);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tlpCenteringTable.BackColor = System.Drawing.Color.Transparent;
+            this.tlpCenteringTable.ColumnCount = 3;
+            this.tlpCenteringTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpCenteringTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tlpCenteringTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpCenteringTable.Controls.Add(this.mpsLoading, 1, 1);
+            this.tlpCenteringTable.Controls.Add(this.mlblSubText, 0, 4);
+            this.tlpCenteringTable.Controls.Add(this.mlblText, 0, 3);
+            this.tlpCenteringTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlpCenteringTable.Location = new System.Drawing.Point(0, 0);
+            this.tlpCenteringTable.Name = "tlpCenteringTable";
+            this.tlpCenteringTable.RowCount = 6;
+            this.tlpCenteringTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpCenteringTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tlpCenteringTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tlpCenteringTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tlpCenteringTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tlpCenteringTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tlpCenteringTable.Size = new System.Drawing.Size(256, 256);
+            this.tlpCenteringTable.TabIndex = 0;
             // 
-            // metroProgressSpinner1
+            // mpsLoading
             // 
-            this.metroProgressSpinner1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroProgressSpinner1.Location = new System.Drawing.Point(96, 78);
-            this.metroProgressSpinner1.Margin = new System.Windows.Forms.Padding(0);
-            this.metroProgressSpinner1.Maximum = 100;
-            this.metroProgressSpinner1.Name = "metroProgressSpinner1";
-            this.metroProgressSpinner1.Size = new System.Drawing.Size(64, 64);
-            this.metroProgressSpinner1.TabIndex = 0;
+            this.mpsLoading.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mpsLoading.Location = new System.Drawing.Point(96, 70);
+            this.mpsLoading.Margin = new System.Windows.Forms.Padding(0);
+            this.mpsLoading.Maximum = 100;
+            this.mpsLoading.Name = "mpsLoading";
+            this.mpsLoading.Size = new System.Drawing.Size(64, 64);
+            this.mpsLoading.TabIndex = 0;
             // 
-            // metroLabel1
+            // mlblSubText
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel1.Location = new System.Drawing.Point(0, 158);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(0);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(256, 20);
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tlpCenteringTable.SetColumnSpan(this.mlblSubText, 3);
+            this.mlblSubText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mlblSubText.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.mlblSubText.Location = new System.Drawing.Point(0, 170);
+            this.mlblSubText.Margin = new System.Windows.Forms.Padding(0);
+            this.mlblSubText.Name = "mlblSubText";
+            this.mlblSubText.Size = new System.Drawing.Size(256, 15);
+            this.mlblSubText.TabIndex = 2;
+            this.mlblSubText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroLabel2
+            // mlblText
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel2.Location = new System.Drawing.Point(0, 178);
-            this.metroLabel2.Margin = new System.Windows.Forms.Padding(0);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(256, 15);
-            this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // subTextUpdateTime
-            // 
-            this.subTextUpdateTime.Interval = 200;
-            this.subTextUpdateTime.Tick += new System.EventHandler(this.subTextUpdateTime_Tick);
+            this.tlpCenteringTable.SetColumnSpan(this.mlblText, 3);
+            this.mlblText.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mlblText.Location = new System.Drawing.Point(0, 150);
+            this.mlblText.Margin = new System.Windows.Forms.Padding(0);
+            this.mlblText.Name = "mlblText";
+            this.mlblText.Size = new System.Drawing.Size(256, 20);
+            this.mlblText.TabIndex = 1;
+            this.mlblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoadingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.tlpCenteringTable);
             this.Name = "LoadingScreen";
             this.Size = new System.Drawing.Size(256, 256);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tlpCenteringTable.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private MetroFramework.Controls.MetroProgressSpinner metroProgressSpinner1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.Timer subTextUpdateTime;
+        private System.Windows.Forms.TableLayoutPanel tlpCenteringTable;
+        private MetroFramework.Controls.MetroProgressSpinner mpsLoading;
+        private MetroFramework.Controls.MetroLabel mlblText;
+        private MetroFramework.Controls.MetroLabel mlblSubText;
     }
 }

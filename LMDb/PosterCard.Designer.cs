@@ -28,47 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.scPoster = new System.Windows.Forms.SplitContainer();
+            this.lblInfo = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.scPoster)).BeginInit();
+            this.scPoster.Panel2.SuspendLayout();
+            this.scPoster.SuspendLayout();
             this.SuspendLayout();
             // 
-            // splitContainer1
+            // scPoster
             // 
-            this.splitContainer1.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.scPoster.BackColor = System.Drawing.Color.Transparent;
+            this.scPoster.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scPoster.Location = new System.Drawing.Point(0, 0);
+            this.scPoster.Name = "scPoster";
+            this.scPoster.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // splitContainer1.Panel1
+            // scPoster.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.scPoster.Panel1.BackColor = System.Drawing.Color.Transparent;
             // 
-            // splitContainer1.Panel2
+            // scPoster.Panel2
             // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.splitContainer1.Panel2.BackgroundImage = global::LMDb.Properties.Resources.mask;
-            this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(280, 420);
-            this.splitContainer1.SplitterDistance = 222;
-            this.splitContainer1.TabIndex = 0;
+            this.scPoster.Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.scPoster.Panel2.BackgroundImage = global::LMDb.Properties.Resources.mask;
+            this.scPoster.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.scPoster.Panel2.Controls.Add(this.lblInfo);
+            this.scPoster.Size = new System.Drawing.Size(280, 420);
+            this.scPoster.SplitterDistance = 222;
+            this.scPoster.TabIndex = 0;
             // 
-            // label1
+            // lblInfo
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
-            this.label1.Size = new System.Drawing.Size(280, 194);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblInfo.Font = new System.Drawing.Font("Meiryo UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblInfo.Location = new System.Drawing.Point(0, 0);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Padding = new System.Windows.Forms.Padding(0, 25, 0, 0);
+            this.lblInfo.Size = new System.Drawing.Size(280, 194);
+            this.lblInfo.TabIndex = 0;
+            this.lblInfo.Text = "Info";
+            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // PosterCard
             // 
@@ -77,20 +77,20 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::LMDb.Properties.Resources.a;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.scPoster);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PosterCard";
             this.Size = new System.Drawing.Size(280, 420);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.scPoster.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scPoster)).EndInit();
+            this.scPoster.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.SplitContainer scPoster;
+        private System.Windows.Forms.Label lblInfo;
     }
 }

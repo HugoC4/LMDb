@@ -22,6 +22,29 @@ namespace LMDb
             M2V
         }
 
+        public enum TomatoImages
+        {
+            Fresh,
+            Certified,
+            Rotten
+        }
+
+        public enum ItemStatus
+        {
+            Conflicted,
+            Synced,
+            Unsynced,
+            Ignored
+        }
+
+        public enum SearchType
+        {
+            Movie,
+            Series,
+            Episode,
+            Game
+        }
+
         public static List<T> GetEnumList<T>()
         {
             return Enum.GetValues(typeof(T)).Cast<T>().ToList();

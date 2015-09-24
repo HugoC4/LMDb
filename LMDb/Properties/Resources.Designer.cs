@@ -73,6 +73,16 @@ namespace LMDb.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a1 {
+            get {
+                object obj = ResourceManager.GetObject("a1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap b {
             get {
                 object obj = ResourceManager.GetObject("b", resourceCulture);
@@ -91,7 +101,7 @@ namespace LMDb.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Checking Your Library For Changes....
+        ///   Looks up a localized string similar to Checking Your Library for Changes....
         /// </summary>
         internal static string Loading_Library_CheckChanges {
             get {
@@ -118,7 +128,7 @@ namespace LMDb.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Updating The Local Database....
+        ///   Looks up a localized string similar to Saving Changes....
         /// </summary>
         internal static string Loading_Library_Update_Database {
             get {

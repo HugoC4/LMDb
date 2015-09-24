@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Data.Entity.Migrations;
 using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using LMDb.Db;
 using LMDb.Properties;
 using MetroFramework;
 using MetroFramework.Components;
 using MetroFramework.Controls;
 using MetroFramework.Forms;
+using Vnp;
 
 namespace LMDb
 {
@@ -93,14 +96,34 @@ namespace LMDb
             Thread.Sleep(1250);
 
             List<string> files = new List<string>();
-            foreach (string file in FileSystem.GetFileTree(Environment.GetFolderPath(Environment.SpecialFolder.MyVideos), scanningBackgroundWorker, progress))
+            List<Movie> movies = new List<Movie>();
+            foreach (string file in FileSystem.GetFileTrees(Settings.Default.SearchPaths.Split(';'), scanningBackgroundWorker, progress))
             {
                 files.Add(file);
+                string safeName = file.Substring(file.LastIndexOf(@"\") + 1);
+                InformationGuess guess = VideoNameParser.ParseName(safeName);
+                if (!guess.IsEpisode)
+                {
+                    if (!Program.Context.Movies.Any(p => p.Path == file))
+                    {
+                    
+                            Movie movie = new Movie();
+                            movie.Path = file;
+                            movie.Title = !String.IsNullOrWhiteSpace(guess.Title) ? guess.Title : safeName;
+                            movie.Year = guess.Year != 0 ? (int?)guess.Year : null;
+                            movie.Status = Types.ItemStatus.Unsynced;
+                            movies.Add(movie);
+                    }
+                }
+                
             }
 
             progress.IncrementValue(35).SetText(Resources.Loading_Library_Update_Database).EmptySubText();
             scanningBackgroundWorker.ReportProgress(progress.Value, progress);
 
+            Program.Context.Movies.RemoveRange(Program.Context.Movies.Where(p => !files.Contains(p.Path)));
+            Program.Context.Movies.AddRange(movies);
+            Program.Context.SaveChanges();
             Thread.Sleep(1250);
 
             progress.IncrementValue(15).SetText(Resources.Loading_Library_Prepare_Homepage).EmptySubText();
@@ -108,16 +131,17 @@ namespace LMDb
 
             Thread.Sleep(1250);
 
+            
+
             int i = 0;
-            //files = files.GetRange(0, 24);
-            float perc = 100 / (float)files.Count();
-            int percPerFile = (int)Math.Floor(((float)files.Count() / 50F) * 100);
-            foreach (string file in files)
+            float perc = 100 / (float)Program.Context.Movies.Count();
+            int percPerFile = (int)Math.Floor(((float)Program.Context.Movies.Count() / 50F) * 100);
+            foreach (Movie file in Program.Context.Movies.OrderBy(p => p.Title))
             {
-                progress.IncrementValue(percPerFile).SetSubText("(" + i + "/" + files.Count() + " - " + file + ")");
+                progress.IncrementValue(percPerFile).SetSubText("(" + i + "/" + Program.Context.Movies.Count() + " - " + file.Title + ")");
                 scanningBackgroundWorker.ReportProgress(progress.Value, progress);
                 PosterCard pc = new PosterCard();
-                pc.Text = file;
+                pc.Text = file.Title;
                 pc.Dock = DockStyle.Fill;
                 this.Invoke(new Action(() =>
                 {
@@ -164,11 +188,6 @@ namespace LMDb
                     vcSettings.SelectTab(val);
                 }
             }
-        }
-
-        private void mrTheme_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void mcTheme_SelectedIndexChanged(object sender, EventArgs e)

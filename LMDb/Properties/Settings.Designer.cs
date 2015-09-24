@@ -57,5 +57,17 @@ namespace LMDb.Properties {
                 this["Theme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\Data\\Videos")]
+        public string SearchPaths {
+            get {
+                return ((string)(this["SearchPaths"]));
+            }
+            set {
+                this["SearchPaths"] = value;
+            }
+        }
     }
 }

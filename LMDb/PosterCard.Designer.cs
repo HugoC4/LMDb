@@ -75,7 +75,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::LMDb.Properties.Resources.a;
+            this.BackgroundImage = global::LMDb.Properties.Resources.a1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.scPoster);
             this.Margin = new System.Windows.Forms.Padding(5);

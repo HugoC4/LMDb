@@ -53,6 +53,9 @@ namespace LMDb
             this.mtpSettingsFiles = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.mtpSettingsAppearance = new MetroFramework.Controls.MetroTabPage();
+            this.mbChangeImage = new MetroFramework.Controls.MetroButton();
+            this.pbProfileSettings = new System.Windows.Forms.PictureBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.mcStyle = new MetroFramework.Controls.MetroComboBox();
             this.mlStyle = new MetroFramework.Controls.MetroLabel();
             this.mcTheme = new MetroFramework.Controls.MetroComboBox();
@@ -60,9 +63,6 @@ namespace LMDb
             this.resizeTimer = new System.Windows.Forms.Timer(this.components);
             this.scanningBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.pbProfile = new System.Windows.Forms.PictureBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.pbProfileSettings = new System.Windows.Forms.PictureBox();
-            this.mbChangeImage = new MetroFramework.Controls.MetroButton();
             this.mtcMainTabs.SuspendLayout();
             this.mtHome.SuspendLayout();
             this.vcHome.SuspendLayout();
@@ -76,8 +76,8 @@ namespace LMDb
             this.mtpSettingsGeneral.SuspendLayout();
             this.mtpSettingsFiles.SuspendLayout();
             this.mtpSettingsAppearance.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfileSettings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // mtcMainTabs
@@ -256,6 +256,24 @@ namespace LMDb
             this.mtpSettingsAppearance.Name = "mtpSettingsAppearance";
             this.mtpSettingsAppearance.VerticalScrollbarBarColor = true;
             // 
+            // mbChangeImage
+            // 
+            resources.ApplyResources(this.mbChangeImage, "mbChangeImage");
+            this.mbChangeImage.Name = "mbChangeImage";
+            this.mbChangeImage.Click += new System.EventHandler(this.mbChangeImage_Click);
+            // 
+            // pbProfileSettings
+            // 
+            this.pbProfileSettings.Image = global::LMDb.Properties.Resources.user_placeholder;
+            resources.ApplyResources(this.pbProfileSettings, "pbProfileSettings");
+            this.pbProfileSettings.Name = "pbProfileSettings";
+            this.pbProfileSettings.TabStop = false;
+            // 
+            // metroLabel3
+            // 
+            resources.ApplyResources(this.metroLabel3, "metroLabel3");
+            this.metroLabel3.Name = "metroLabel3";
+            // 
             // mcStyle
             // 
             this.mcStyle.FormattingEnabled = true;
@@ -293,28 +311,10 @@ namespace LMDb
             // 
             // pbProfile
             // 
-            this.pbProfile.Image = global::LMDb.Properties.Resources.user_placeholder;
             resources.ApplyResources(this.pbProfile, "pbProfile");
+            this.pbProfile.Image = global::LMDb.Properties.Resources.user_placeholder;
             this.pbProfile.Name = "pbProfile";
             this.pbProfile.TabStop = false;
-            // 
-            // metroLabel3
-            // 
-            resources.ApplyResources(this.metroLabel3, "metroLabel3");
-            this.metroLabel3.Name = "metroLabel3";
-            // 
-            // pbProfileSettings
-            // 
-            this.pbProfileSettings.Image = global::LMDb.Properties.Resources.user_placeholder;
-            resources.ApplyResources(this.pbProfileSettings, "pbProfileSettings");
-            this.pbProfileSettings.Name = "pbProfileSettings";
-            this.pbProfileSettings.TabStop = false;
-            // 
-            // mbChangeImage
-            // 
-            resources.ApplyResources(this.mbChangeImage, "mbChangeImage");
-            this.mbChangeImage.Name = "mbChangeImage";
-            this.mbChangeImage.Click += new System.EventHandler(this.mbChangeImage_Click);
             // 
             // MainForm
             // 
@@ -340,8 +340,8 @@ namespace LMDb
             this.mtpSettingsFiles.PerformLayout();
             this.mtpSettingsAppearance.ResumeLayout(false);
             this.mtpSettingsAppearance.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProfileSettings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbProfile)).EndInit();
             this.ResumeLayout(false);
 
         }

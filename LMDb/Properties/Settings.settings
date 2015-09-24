@@ -11,5 +11,8 @@
     <Setting Name="Theme" Type="MetroFramework.MetroThemeStyle" Scope="User">
       <Value Profile="(Default)">Light</Value>
     </Setting>
+    <Setting Name="SearchPaths" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\Data\Videos</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

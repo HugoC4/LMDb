@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.IO.Packaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace LMDb
                         progress.SetSubText("(" + filename + ")");
                         worker.ReportProgress(progress.Value, progress);
                     }
-                    yield return filename;
+                    yield return s;
                 }
                 
             }
@@ -66,6 +67,17 @@ namespace LMDb
             {
                 return new string[0];
             }
+        }
+
+        public static IEnumerable<string> GetFileTrees(string[] directories, BackgroundWorker worker = null, ProgressState progress = null)
+        {
+            foreach (string path in directories)
+            {
+                foreach (string file in GetFileTree(path, worker, progress))
+                    yield return file;
+            }
+
+
         }
     }
 }

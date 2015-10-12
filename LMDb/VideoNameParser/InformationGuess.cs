@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Vnp
+﻿namespace LMDb.VideoNameParser
 {
     public class InformationGuess
     {
@@ -25,6 +20,7 @@ namespace Vnp
         public string Resolution { get; set; }
         public int Season { get; set; }
         public string Title { get; set; }
+        public string Path { get; set; }
         public string Website { get; set; }
         public bool Widescreen { get; set; }
         public int Year { get; set; }

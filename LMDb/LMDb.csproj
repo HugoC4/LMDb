@@ -75,12 +75,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\Omdb\ApiResult.cs" />
+    <Compile Include="API\Omdb\Attributes.cs" />
     <Compile Include="API\Omdb\InformationResult.cs" />
     <Compile Include="API\Omdb\RawInformationResult.cs" />
     <Compile Include="API\Omdb\Omdb.cs" />
     <Compile Include="API\Omdb\SearchEntry.cs" />
     <Compile Include="API\Omdb\SearchResult.cs" />
+    <Compile Include="Db\ContentPath.cs" />
     <Compile Include="Db\LmdbContext.cs" />
+    <Compile Include="Db\IContentLink.cs" />
     <Compile Include="Db\Season.cs" />
     <Compile Include="Db\Language.cs" />
     <Compile Include="Db\Rating.cs" />
@@ -95,7 +98,9 @@
     <Compile Include="Db\Producer.cs" />
     <Compile Include="Db\Series.cs" />
     <Compile Include="Db\Writer.cs" />
-    <Compile Include="FileSystem.cs" />
+    <Compile Include="Scan\BackgroundWorker.cs" />
+    <Compile Include="Scan\BackgroundWorkerHelper.cs" />
+    <Compile Include="Scan\FileSystem.cs" />
     <Compile Include="LoadingScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,20 +114,20 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="PosterCard.cs">
+    <Compile Include="Controls\PosterCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PosterCard.Designer.cs">
+    <Compile Include="Controls\PosterCard.Designer.cs">
       <DependentUpon>PosterCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="ProgressState.cs" />
+    <Compile Include="Scan\ProgressState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
+    <Compile Include="Properties\Settings.cs" />
     <Compile Include="Types.cs" />
-    <Compile Include="InformationGuess.cs" />
-    <Compile Include="VideoNameParser.cs" />
-    <Compile Include="ViewControl.cs">
+    <Compile Include="VideoNameParser\InformationGuess.cs" />
+    <Compile Include="VideoNameParser\Parser.cs" />
+    <Compile Include="Controls\ViewControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="LoadingScreen.resx">
@@ -131,7 +136,7 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PosterCard.resx">
+    <EmbeddedResource Include="Controls\PosterCard.resx">
       <DependentUpon>PosterCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

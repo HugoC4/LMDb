@@ -5,9 +5,9 @@ using System.Drawing;
 using System.Windows.Forms;
 using MetroFramework.Controls;
 
-namespace LMDb
+namespace LMDb.Controls
 {
-    class ViewControl : MetroTabControl
+    public class ViewControl : MetroTabControl
     {
         private const int TCM_ADJUSTRECT = 0x1328;
         

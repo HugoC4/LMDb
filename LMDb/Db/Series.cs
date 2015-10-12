@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LMDb.API.Omdb;
 
 namespace LMDb.Db
 {
@@ -11,7 +12,12 @@ namespace LMDb.Db
     */
     class Series : Content
     {
-        public int SeriesId { get; set; }
-        public virtual List<Season> Seasons { get; set; }
+        public Series()
+        {
+            Seasons = new List<Season>();
+        }
+        public int SeriesID { get; set; }
+        public virtual ICollection<Season> Seasons { get; set; }
+        public SearchResult SearchResult { get; set; }
     }
 }

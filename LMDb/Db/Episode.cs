@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace LMDb.Db
 {
@@ -11,6 +7,8 @@ namespace LMDb.Db
     */
     class Episode : Content
     {
-        public int EpisodeId { get; set; }
+        public int EpisodeID { get; set; }
+        public int? EpisodeIndex { get; set; }
+        public virtual Season Season { get; set; } 
     }
 }

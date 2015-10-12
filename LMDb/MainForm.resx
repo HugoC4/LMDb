@@ -125,43 +125,6 @@
   <data name="vcHome.Appearance" type="System.Windows.Forms.TabAppearance, System.Windows.Forms">
     <value>FlatButtons</value>
   </data>
-  <data name="ldHome.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ldHome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="ldHome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>584, 342</value>
-  </data>
-  <data name="ldHome.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ldHome.Name" xml:space="preserve">
-    <value>ldHome</value>
-  </data>
-  <data name="&gt;&gt;ldHome.Type" xml:space="preserve">
-    <value>LMDb.LoadingScreen, LMDb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;ldHome.Parent" xml:space="preserve">
-    <value>vcpLoadingScreen</value>
-  </data>
-  <data name="&gt;&gt;ldHome.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="vcpLoadingScreen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 5</value>
-  </data>
-  <data name="vcpLoadingScreen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>584, 342</value>
-  </data>
-  <data name="vcpLoadingScreen.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="vcpLoadingScreen.Text" xml:space="preserve">
-    <value>Loadingscreen</value>
-  </data>
   <data name="&gt;&gt;vcpLoadingScreen.Name" xml:space="preserve">
     <value>vcpLoadingScreen</value>
   </data>
@@ -173,54 +136,6 @@
   </data>
   <data name="&gt;&gt;vcpLoadingScreen.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="vcpOverview.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tlOverview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="tlOverview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tlOverview.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tlOverview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 332</value>
-  </data>
-  <data name="tlOverview.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tlOverview.Name" xml:space="preserve">
-    <value>tlOverview</value>
-  </data>
-  <data name="&gt;&gt;tlOverview.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tlOverview.Parent" xml:space="preserve">
-    <value>vcpOverview</value>
-  </data>
-  <data name="&gt;&gt;tlOverview.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tlOverview.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="Absolute,592" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="vcpOverview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 5</value>
-  </data>
-  <data name="vcpOverview.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 10</value>
-  </data>
-  <data name="vcpOverview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>584, 342</value>
-  </data>
-  <data name="vcpOverview.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="vcpOverview.Text" xml:space="preserve">
-    <value>Overview</value>
   </data>
   <data name="&gt;&gt;vcpOverview.Name" xml:space="preserve">
     <value>vcpOverview</value>
@@ -237,6 +152,7 @@
   <data name="vcHome.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="vcHome.ItemSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 1</value>
   </data>
@@ -253,7 +169,7 @@
     <value>vcHome</value>
   </data>
   <data name="&gt;&gt;vcHome.Type" xml:space="preserve">
-    <value>LMDb.ViewControl, LMDb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>LMDb.Controls.ViewControl, LMDb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;vcHome.Parent" xml:space="preserve">
     <value>mtHome</value>
@@ -297,8 +213,800 @@
   <data name="mpSettingsCategories.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;tlSettingsCategories.Name" xml:space="preserve">
+    <value>tlSettingsCategories</value>
+  </data>
+  <data name="&gt;&gt;tlSettingsCategories.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlSettingsCategories.Parent" xml:space="preserve">
+    <value>mpSettingsCategories</value>
+  </data>
+  <data name="&gt;&gt;tlSettingsCategories.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tlSettingsCategories.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mllGeneral" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mllFiles" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mllAppearance" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,20,Absolute,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;mlCategories.Name" xml:space="preserve">
+    <value>mlCategories</value>
+  </data>
+  <data name="&gt;&gt;mlCategories.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mlCategories.Parent" xml:space="preserve">
+    <value>mpSettingsCategories</value>
+  </data>
+  <data name="&gt;&gt;mlCategories.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="mpSettingsCategories.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="mpSettingsCategories.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="mpSettingsCategories.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="mpSettingsCategories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 329</value>
+  </data>
+  <data name="mpSettingsCategories.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mpSettingsCategories.Name" xml:space="preserve">
+    <value>mpSettingsCategories</value>
+  </data>
+  <data name="&gt;&gt;mpSettingsCategories.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mpSettingsCategories.Parent" xml:space="preserve">
+    <value>tlSettings</value>
+  </data>
+  <data name="&gt;&gt;mpSettingsCategories.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="vcSettings.Appearance" type="System.Windows.Forms.TabAppearance, System.Windows.Forms">
+    <value>FlatButtons</value>
+  </data>
+  <data name="&gt;&gt;metroLabel1.Name" xml:space="preserve">
+    <value>metroLabel1</value>
+  </data>
+  <data name="&gt;&gt;metroLabel1.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;metroLabel1.Parent" xml:space="preserve">
+    <value>mtpSettingsGeneral</value>
+  </data>
+  <data name="&gt;&gt;metroLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="mtpSettingsGeneral.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 5</value>
+  </data>
+  <data name="mtpSettingsGeneral.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 320</value>
+  </data>
+  <data name="mtpSettingsGeneral.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mtpSettingsGeneral.Text" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsGeneral.Name" xml:space="preserve">
+    <value>mtpSettingsGeneral</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsGeneral.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsGeneral.Parent" xml:space="preserve">
+    <value>vcSettings</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsGeneral.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;metroLabel2.Name" xml:space="preserve">
+    <value>metroLabel2</value>
+  </data>
+  <data name="&gt;&gt;metroLabel2.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;metroLabel2.Parent" xml:space="preserve">
+    <value>mtpSettingsFiles</value>
+  </data>
+  <data name="&gt;&gt;metroLabel2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="mtpSettingsFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 5</value>
+  </data>
+  <data name="mtpSettingsFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 320</value>
+  </data>
+  <data name="mtpSettingsFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="mtpSettingsFiles.Text" xml:space="preserve">
+    <value>Files and Directories</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsFiles.Name" xml:space="preserve">
+    <value>mtpSettingsFiles</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsFiles.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsFiles.Parent" xml:space="preserve">
+    <value>vcSettings</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsFiles.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mrbPoster1080.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mrbPoster1080.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mrbPoster1080.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 193</value>
+  </data>
+  <data name="mrbPoster1080.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 15</value>
+  </data>
+  <data name="mrbPoster1080.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="mrbPoster1080.Text" xml:space="preserve">
+    <value>1080px</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster1080.Name" xml:space="preserve">
+    <value>mrbPoster1080</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster1080.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster1080.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster1080.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="mrbPoster720.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mrbPoster720.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mrbPoster720.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 172</value>
+  </data>
+  <data name="mrbPoster720.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 15</value>
+  </data>
+  <data name="mrbPoster720.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="mrbPoster720.Text" xml:space="preserve">
+    <value>720px</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster720.Name" xml:space="preserve">
+    <value>mrbPoster720</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster720.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster720.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster720.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="mrbPoster480.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mrbPoster480.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="mrbPoster480.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 151</value>
+  </data>
+  <data name="mrbPoster480.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 15</value>
+  </data>
+  <data name="mrbPoster480.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="mrbPoster480.Text" xml:space="preserve">
+    <value>480px</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster480.Name" xml:space="preserve">
+    <value>mrbPoster480</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster480.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster480.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;mrbPoster480.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="mrbPosterDefault.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mrbPosterDefault.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 130</value>
+  </data>
+  <data name="mrbPosterDefault.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 15</value>
+  </data>
+  <data name="mrbPosterDefault.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="mrbPosterDefault.Text" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;mrbPosterDefault.Name" xml:space="preserve">
+    <value>mrbPosterDefault</value>
+  </data>
+  <data name="&gt;&gt;mrbPosterDefault.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroRadioButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mrbPosterDefault.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;mrbPosterDefault.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="metroLabel4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="metroLabel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 108</value>
+  </data>
+  <data name="metroLabel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>113, 19</value>
+  </data>
+  <data name="metroLabel4.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="metroLabel4.Text" xml:space="preserve">
+    <value>Max Poster Width</value>
+  </data>
+  <data name="&gt;&gt;metroLabel4.Name" xml:space="preserve">
+    <value>metroLabel4</value>
+  </data>
+  <data name="&gt;&gt;metroLabel4.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;metroLabel4.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;metroLabel4.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="mbChangeImage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 200</value>
+  </data>
+  <data name="mbChangeImage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 23</value>
+  </data>
+  <data name="mbChangeImage.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="mbChangeImage.Text" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="&gt;&gt;mbChangeImage.Name" xml:space="preserve">
+    <value>mbChangeImage</value>
+  </data>
+  <data name="&gt;&gt;mbChangeImage.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mbChangeImage.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;mbChangeImage.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="pbProfileSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 130</value>
+  </data>
+  <data name="pbProfileSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 64</value>
+  </data>
+  <data name="pbProfileSettings.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pbProfileSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pbProfileSettings.Name" xml:space="preserve">
+    <value>pbProfileSettings</value>
+  </data>
+  <data name="&gt;&gt;pbProfileSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbProfileSettings.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;pbProfileSettings.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="metroLabel3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="metroLabel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 108</value>
+  </data>
+  <data name="metroLabel3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 19</value>
+  </data>
+  <data name="metroLabel3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="metroLabel3.Text" xml:space="preserve">
+    <value>User Image</value>
+  </data>
+  <data name="&gt;&gt;metroLabel3.Name" xml:space="preserve">
+    <value>metroLabel3</value>
+  </data>
+  <data name="&gt;&gt;metroLabel3.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;metroLabel3.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;metroLabel3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="mcStyle.ItemHeight" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="mcStyle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 76</value>
+  </data>
+  <data name="mcStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 29</value>
+  </data>
+  <data name="mcStyle.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;mcStyle.Name" xml:space="preserve">
+    <value>mcStyle</value>
+  </data>
+  <data name="&gt;&gt;mcStyle.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroComboBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mcStyle.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;mcStyle.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="mlStyle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mlStyle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 54</value>
+  </data>
+  <data name="mlStyle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 19</value>
+  </data>
+  <data name="mlStyle.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="mlStyle.Text" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="&gt;&gt;mlStyle.Name" xml:space="preserve">
+    <value>mlStyle</value>
+  </data>
+  <data name="&gt;&gt;mlStyle.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mlStyle.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;mlStyle.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="mcTheme.ItemHeight" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="mcTheme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 22</value>
+  </data>
+  <data name="mcTheme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 29</value>
+  </data>
+  <data name="mcTheme.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;mcTheme.Name" xml:space="preserve">
+    <value>mcTheme</value>
+  </data>
+  <data name="&gt;&gt;mcTheme.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroComboBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mcTheme.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;mcTheme.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="mlTheme.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="mlTheme.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="mlTheme.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 19</value>
+  </data>
+  <data name="mlTheme.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="mlTheme.Text" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="&gt;&gt;mlTheme.Name" xml:space="preserve">
+    <value>mlTheme</value>
+  </data>
+  <data name="&gt;&gt;mlTheme.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mlTheme.Parent" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;mlTheme.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="mtpSettingsAppearance.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 5</value>
+  </data>
+  <data name="mtpSettingsAppearance.Size" type="System.Drawing.Size, System.Drawing">
+    <value>337, 320</value>
+  </data>
+  <data name="mtpSettingsAppearance.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="mtpSettingsAppearance.Text" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsAppearance.Name" xml:space="preserve">
+    <value>mtpSettingsAppearance</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsAppearance.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsAppearance.Parent" xml:space="preserve">
+    <value>vcSettings</value>
+  </data>
+  <data name="&gt;&gt;mtpSettingsAppearance.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="vcSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="vcSettings.ItemSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="vcSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>230, 15</value>
+  </data>
+  <data name="vcSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="vcSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 329</value>
+  </data>
+  <data name="vcSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;vcSettings.Name" xml:space="preserve">
+    <value>vcSettings</value>
+  </data>
+  <data name="&gt;&gt;vcSettings.Type" xml:space="preserve">
+    <value>LMDb.Controls.ViewControl, LMDb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;vcSettings.Parent" xml:space="preserve">
+    <value>tlSettings</value>
+  </data>
+  <data name="&gt;&gt;vcSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tlSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="tlSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>15, 15, 15, 15</value>
+  </data>
+  <data name="tlSettings.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>590, 359</value>
+  </data>
+  <data name="tlSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tlSettings.Name" xml:space="preserve">
+    <value>tlSettings</value>
+  </data>
+  <data name="&gt;&gt;tlSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlSettings.Parent" xml:space="preserve">
+    <value>mtSettings</value>
+  </data>
+  <data name="&gt;&gt;tlSettings.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tlSettings.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mpSettingsCategories" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="vcSettings" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,215,Percent,100" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="mtSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 35</value>
+  </data>
+  <data name="mtSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="mtSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>592, 361</value>
+  </data>
+  <data name="mtSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="mtSettings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;mtSettings.Name" xml:space="preserve">
+    <value>mtSettings</value>
+  </data>
+  <data name="&gt;&gt;mtSettings.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mtSettings.Parent" xml:space="preserve">
+    <value>mtcMainTabs</value>
+  </data>
+  <data name="&gt;&gt;mtSettings.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mtcMainTabs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="mtcMainTabs.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 60</value>
+  </data>
+  <data name="mtcMainTabs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 400</value>
+  </data>
+  <data name="mtcMainTabs.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mtcMainTabs.Name" xml:space="preserve">
+    <value>mtcMainTabs</value>
+  </data>
+  <data name="&gt;&gt;mtcMainTabs.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabControl, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mtcMainTabs.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mtcMainTabs.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ldHome.Name" xml:space="preserve">
+    <value>ldHome</value>
+  </data>
+  <data name="&gt;&gt;ldHome.Type" xml:space="preserve">
+    <value>LMDb.LoadingScreen, LMDb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ldHome.Parent" xml:space="preserve">
+    <value>vcpLoadingScreen</value>
+  </data>
+  <data name="&gt;&gt;ldHome.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="vcpLoadingScreen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 5</value>
+  </data>
+  <data name="vcpLoadingScreen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>584, 342</value>
+  </data>
+  <data name="vcpLoadingScreen.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="vcpLoadingScreen.Text" xml:space="preserve">
+    <value>Loadingscreen</value>
+  </data>
+  <data name="&gt;&gt;vcpLoadingScreen.Name" xml:space="preserve">
+    <value>vcpLoadingScreen</value>
+  </data>
+  <data name="&gt;&gt;vcpLoadingScreen.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;vcpLoadingScreen.Parent" xml:space="preserve">
+    <value>vcHome</value>
+  </data>
+  <data name="&gt;&gt;vcpLoadingScreen.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ldHome.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ldHome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="ldHome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>584, 342</value>
+  </data>
+  <data name="ldHome.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ldHome.Name" xml:space="preserve">
+    <value>ldHome</value>
+  </data>
+  <data name="&gt;&gt;ldHome.Type" xml:space="preserve">
+    <value>LMDb.LoadingScreen, LMDb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ldHome.Parent" xml:space="preserve">
+    <value>vcpLoadingScreen</value>
+  </data>
+  <data name="&gt;&gt;ldHome.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="vcpOverview.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;tlOverview.Name" xml:space="preserve">
+    <value>tlOverview</value>
+  </data>
+  <data name="&gt;&gt;tlOverview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlOverview.Parent" xml:space="preserve">
+    <value>vcpOverview</value>
+  </data>
+  <data name="&gt;&gt;tlOverview.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tlOverview.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="Absolute,592" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="vcpOverview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 5</value>
+  </data>
+  <data name="vcpOverview.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 10</value>
+  </data>
+  <data name="vcpOverview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>584, 342</value>
+  </data>
+  <data name="vcpOverview.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="vcpOverview.Text" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="&gt;&gt;vcpOverview.Name" xml:space="preserve">
+    <value>vcpOverview</value>
+  </data>
+  <data name="&gt;&gt;vcpOverview.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;vcpOverview.Parent" xml:space="preserve">
+    <value>vcHome</value>
+  </data>
+  <data name="&gt;&gt;vcpOverview.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlOverview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="tlOverview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tlOverview.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlOverview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 332</value>
+  </data>
+  <data name="tlOverview.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tlOverview.Name" xml:space="preserve">
+    <value>tlOverview</value>
+  </data>
+  <data name="&gt;&gt;tlOverview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlOverview.Parent" xml:space="preserve">
+    <value>vcpOverview</value>
+  </data>
+  <data name="&gt;&gt;tlOverview.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tlOverview.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls /&gt;&lt;Columns Styles="Absolute,592" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
   <data name="tlSettingsCategories.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
+  </data>
+  <data name="&gt;&gt;mllGeneral.Name" xml:space="preserve">
+    <value>mllGeneral</value>
+  </data>
+  <data name="&gt;&gt;mllGeneral.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mllGeneral.Parent" xml:space="preserve">
+    <value>tlSettingsCategories</value>
+  </data>
+  <data name="&gt;&gt;mllGeneral.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mllFiles.Name" xml:space="preserve">
+    <value>mllFiles</value>
+  </data>
+  <data name="&gt;&gt;mllFiles.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mllFiles.Parent" xml:space="preserve">
+    <value>tlSettingsCategories</value>
+  </data>
+  <data name="&gt;&gt;mllFiles.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;mllAppearance.Name" xml:space="preserve">
+    <value>mllAppearance</value>
+  </data>
+  <data name="&gt;&gt;mllAppearance.Type" xml:space="preserve">
+    <value>MetroFramework.Controls.MetroLink, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
+  </data>
+  <data name="&gt;&gt;mllAppearance.Parent" xml:space="preserve">
+    <value>tlSettingsCategories</value>
+  </data>
+  <data name="&gt;&gt;mllAppearance.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tlSettingsCategories.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tlSettingsCategories.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 18</value>
+  </data>
+  <data name="tlSettingsCategories.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="tlSettingsCategories.RowCount" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tlSettingsCategories.Size" type="System.Drawing.Size, System.Drawing">
+    <value>215, 311</value>
+  </data>
+  <data name="tlSettingsCategories.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tlSettingsCategories.Name" xml:space="preserve">
+    <value>tlSettingsCategories</value>
+  </data>
+  <data name="&gt;&gt;tlSettingsCategories.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlSettingsCategories.Parent" xml:space="preserve">
+    <value>mpSettingsCategories</value>
+  </data>
+  <data name="&gt;&gt;tlSettingsCategories.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tlSettingsCategories.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mllGeneral" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mllFiles" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mllAppearance" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,20,Absolute,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="mllGeneral.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -408,39 +1116,6 @@
   <data name="&gt;&gt;mllAppearance.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="tlSettingsCategories.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tlSettingsCategories.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 18</value>
-  </data>
-  <data name="tlSettingsCategories.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="tlSettingsCategories.RowCount" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="tlSettingsCategories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 311</value>
-  </data>
-  <data name="tlSettingsCategories.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tlSettingsCategories.Name" xml:space="preserve">
-    <value>tlSettingsCategories</value>
-  </data>
-  <data name="&gt;&gt;tlSettingsCategories.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tlSettingsCategories.Parent" xml:space="preserve">
-    <value>mpSettingsCategories</value>
-  </data>
-  <data name="&gt;&gt;tlSettingsCategories.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tlSettingsCategories.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mllGeneral" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mllFiles" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="mllAppearance" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Absolute,20,Absolute,20,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
   <data name="mlCategories.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -471,36 +1146,6 @@
   <data name="&gt;&gt;mlCategories.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="mpSettingsCategories.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="mpSettingsCategories.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="mpSettingsCategories.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="mpSettingsCategories.Size" type="System.Drawing.Size, System.Drawing">
-    <value>215, 329</value>
-  </data>
-  <data name="mpSettingsCategories.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mpSettingsCategories.Name" xml:space="preserve">
-    <value>mpSettingsCategories</value>
-  </data>
-  <data name="&gt;&gt;mpSettingsCategories.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroPanel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mpSettingsCategories.Parent" xml:space="preserve">
-    <value>tlSettings</value>
-  </data>
-  <data name="&gt;&gt;mpSettingsCategories.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="vcSettings.Appearance" type="System.Windows.Forms.TabAppearance, System.Windows.Forms">
-    <value>FlatButtons</value>
-  </data>
   <data name="metroLabel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -528,30 +1173,6 @@
   <data name="&gt;&gt;metroLabel1.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="mtpSettingsGeneral.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 5</value>
-  </data>
-  <data name="mtpSettingsGeneral.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 320</value>
-  </data>
-  <data name="mtpSettingsGeneral.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="mtpSettingsGeneral.Text" xml:space="preserve">
-    <value>General</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsGeneral.Name" xml:space="preserve">
-    <value>mtpSettingsGeneral</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsGeneral.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsGeneral.Parent" xml:space="preserve">
-    <value>vcSettings</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsGeneral.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="metroLabel2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -578,345 +1199,6 @@
   </data>
   <data name="&gt;&gt;metroLabel2.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="mtpSettingsFiles.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 5</value>
-  </data>
-  <data name="mtpSettingsFiles.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 320</value>
-  </data>
-  <data name="mtpSettingsFiles.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="mtpSettingsFiles.Text" xml:space="preserve">
-    <value>Files and Directories</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsFiles.Name" xml:space="preserve">
-    <value>mtpSettingsFiles</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsFiles.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsFiles.Parent" xml:space="preserve">
-    <value>vcSettings</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsFiles.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mbChangeImage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 200</value>
-  </data>
-  <data name="mbChangeImage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 23</value>
-  </data>
-  <data name="mbChangeImage.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="mbChangeImage.Text" xml:space="preserve">
-    <value>Change</value>
-  </data>
-  <data name="&gt;&gt;mbChangeImage.Name" xml:space="preserve">
-    <value>mbChangeImage</value>
-  </data>
-  <data name="&gt;&gt;mbChangeImage.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroButton, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mbChangeImage.Parent" xml:space="preserve">
-    <value>mtpSettingsAppearance</value>
-  </data>
-  <data name="&gt;&gt;mbChangeImage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pbProfileSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 130</value>
-  </data>
-  <data name="pbProfileSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 64</value>
-  </data>
-  <data name="pbProfileSettings.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pbProfileSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;pbProfileSettings.Name" xml:space="preserve">
-    <value>pbProfileSettings</value>
-  </data>
-  <data name="&gt;&gt;pbProfileSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbProfileSettings.Parent" xml:space="preserve">
-    <value>mtpSettingsAppearance</value>
-  </data>
-  <data name="&gt;&gt;pbProfileSettings.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="metroLabel3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="metroLabel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 108</value>
-  </data>
-  <data name="metroLabel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 19</value>
-  </data>
-  <data name="metroLabel3.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="metroLabel3.Text" xml:space="preserve">
-    <value>User Image</value>
-  </data>
-  <data name="&gt;&gt;metroLabel3.Name" xml:space="preserve">
-    <value>metroLabel3</value>
-  </data>
-  <data name="&gt;&gt;metroLabel3.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;metroLabel3.Parent" xml:space="preserve">
-    <value>mtpSettingsAppearance</value>
-  </data>
-  <data name="&gt;&gt;metroLabel3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="mcStyle.ItemHeight" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="mcStyle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 76</value>
-  </data>
-  <data name="mcStyle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 29</value>
-  </data>
-  <data name="mcStyle.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;mcStyle.Name" xml:space="preserve">
-    <value>mcStyle</value>
-  </data>
-  <data name="&gt;&gt;mcStyle.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroComboBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mcStyle.Parent" xml:space="preserve">
-    <value>mtpSettingsAppearance</value>
-  </data>
-  <data name="&gt;&gt;mcStyle.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="mlStyle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mlStyle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 54</value>
-  </data>
-  <data name="mlStyle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 19</value>
-  </data>
-  <data name="mlStyle.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="mlStyle.Text" xml:space="preserve">
-    <value>Style</value>
-  </data>
-  <data name="&gt;&gt;mlStyle.Name" xml:space="preserve">
-    <value>mlStyle</value>
-  </data>
-  <data name="&gt;&gt;mlStyle.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mlStyle.Parent" xml:space="preserve">
-    <value>mtpSettingsAppearance</value>
-  </data>
-  <data name="&gt;&gt;mlStyle.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="mcTheme.ItemHeight" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="mcTheme.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 22</value>
-  </data>
-  <data name="mcTheme.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 29</value>
-  </data>
-  <data name="mcTheme.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;mcTheme.Name" xml:space="preserve">
-    <value>mcTheme</value>
-  </data>
-  <data name="&gt;&gt;mcTheme.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroComboBox, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mcTheme.Parent" xml:space="preserve">
-    <value>mtpSettingsAppearance</value>
-  </data>
-  <data name="&gt;&gt;mcTheme.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="mlTheme.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="mlTheme.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="mlTheme.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 19</value>
-  </data>
-  <data name="mlTheme.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="mlTheme.Text" xml:space="preserve">
-    <value>Theme</value>
-  </data>
-  <data name="&gt;&gt;mlTheme.Name" xml:space="preserve">
-    <value>mlTheme</value>
-  </data>
-  <data name="&gt;&gt;mlTheme.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroLabel, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mlTheme.Parent" xml:space="preserve">
-    <value>mtpSettingsAppearance</value>
-  </data>
-  <data name="&gt;&gt;mlTheme.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="mtpSettingsAppearance.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 5</value>
-  </data>
-  <data name="mtpSettingsAppearance.Size" type="System.Drawing.Size, System.Drawing">
-    <value>337, 320</value>
-  </data>
-  <data name="mtpSettingsAppearance.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="mtpSettingsAppearance.Text" xml:space="preserve">
-    <value>Appearance</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsAppearance.Name" xml:space="preserve">
-    <value>mtpSettingsAppearance</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsAppearance.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsAppearance.Parent" xml:space="preserve">
-    <value>vcSettings</value>
-  </data>
-  <data name="&gt;&gt;mtpSettingsAppearance.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="vcSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="vcSettings.ItemSize" type="System.Drawing.Size, System.Drawing">
-    <value>0, 1</value>
-  </data>
-  <data name="vcSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>230, 15</value>
-  </data>
-  <data name="vcSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="vcSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 329</value>
-  </data>
-  <data name="vcSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;vcSettings.Name" xml:space="preserve">
-    <value>vcSettings</value>
-  </data>
-  <data name="&gt;&gt;vcSettings.Type" xml:space="preserve">
-    <value>LMDb.ViewControl, LMDb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;vcSettings.Parent" xml:space="preserve">
-    <value>tlSettings</value>
-  </data>
-  <data name="&gt;&gt;vcSettings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tlSettings.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tlSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="tlSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>15, 15, 15, 15</value>
-  </data>
-  <data name="tlSettings.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tlSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>590, 359</value>
-  </data>
-  <data name="tlSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tlSettings.Name" xml:space="preserve">
-    <value>tlSettings</value>
-  </data>
-  <data name="&gt;&gt;tlSettings.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tlSettings.Parent" xml:space="preserve">
-    <value>mtSettings</value>
-  </data>
-  <data name="&gt;&gt;tlSettings.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tlSettings.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="mpSettingsCategories" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="vcSettings" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,215,Percent,100" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="mtSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 35</value>
-  </data>
-  <data name="mtSettings.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
-  <data name="mtSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>592, 361</value>
-  </data>
-  <data name="mtSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="mtSettings.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="&gt;&gt;mtSettings.Name" xml:space="preserve">
-    <value>mtSettings</value>
-  </data>
-  <data name="&gt;&gt;mtSettings.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabPage, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mtSettings.Parent" xml:space="preserve">
-    <value>mtcMainTabs</value>
-  </data>
-  <data name="&gt;&gt;mtSettings.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mtcMainTabs.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="mtcMainTabs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 60</value>
-  </data>
-  <data name="mtcMainTabs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 400</value>
-  </data>
-  <data name="mtcMainTabs.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mtcMainTabs.Name" xml:space="preserve">
-    <value>mtcMainTabs</value>
-  </data>
-  <data name="&gt;&gt;mtcMainTabs.Type" xml:space="preserve">
-    <value>MetroFramework.Controls.MetroTabControl, MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a</value>
-  </data>
-  <data name="&gt;&gt;mtcMainTabs.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;mtcMainTabs.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <metadata name="resizeTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using System.Xml;
 using LMDb.API.Omdb;
 using LMDb.Db;
@@ -17,8 +20,11 @@ namespace LMDb
 {
     static class Program
     {
-        public static LmdbContext Context;
-       
+        public static LmdbContext Context { get; set; }
+        public static string BaseUrl = AppDomain.CurrentDomain.BaseDirectory;
+        public static string CacheUrl = BaseUrl + @"\cache";
+        public static string ImageCacheUrl = CacheUrl + @"\img";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -29,36 +35,32 @@ namespace LMDb
             Application.SetCompatibleTextRenderingDefault(false);
             MetroStyleManager.Default.Theme = Properties.Settings.Default.Theme;
             MetroStyleManager.Default.Style = Properties.Settings.Default.Style;
-
-            //Database.SetInitializer(new DropCreateDatabaseAlways<LmdbContext>());
+            
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<LmdbContext, Configuration>());
             Context = new LmdbContext();
             //Context.Database.Delete();
 
-           // using (var writer = new XmlTextWriter(@"D:\Model.edmx", Encoding.Default))
-           // {
-           //     EdmxWriter.WriteEdmx(Context, writer);
-           // }
-
-            //int total = Context.Movies.Count();
-            //int found = 0;
-            //List<InformationResult> a = new List<InformationResult>();
-            //foreach (Movie movie in Context.Movies)
-            //{
-                //SearchResult b = Omdb.Search(movie.Title, movie.Year);
-                //if (b != null)
-                //{
-                    //found++;
-                    //var c = Omdb.GetInformationByTitle(movie.Title, null, Types.SearchType.Episode, false, true, 1, 1);
-                    //if(c != null)
-                        //a.Add(c);
-                //}
-            //}
-
-            //Console.WriteLine("Fount: " + found + "/" + total);
-            //while (true) continue;
+            CreateCacheFolders();
             Application.Run(new MainForm());
 
+            while (6<9)
+                using (var writer = new XmlTextWriter(@"D:\Model.edmx", Encoding.Default))
+                {
+                    EdmxWriter.WriteEdmx(Context, writer);
+                };
+
+        }
+
+        public static void CreateCacheFolders()
+        {
+            if (!Directory.Exists(BaseUrl))
+                Directory.CreateDirectory(BaseUrl);
+
+            if (!Directory.Exists(CacheUrl))
+                Directory.CreateDirectory(CacheUrl);
+
+            if (!Directory.Exists(ImageCacheUrl))
+                Directory.CreateDirectory(ImageCacheUrl);
         }
     }
 }

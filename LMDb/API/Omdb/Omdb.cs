@@ -36,7 +36,7 @@ namespace LMDb.API.Omdb
         private const string FormatPrimaryParam = "?{0}={1}";
         private const string FormatSecondaryParams = "&{0}={1}";
 
-        public const string DateFormat = "dd MMM yyyy";
+        private const string DateFormat = "dd MMM yyyy";
         private const string ValueNotApplicable = "N/A";
         public const int ApiVersion = 1;
 
@@ -52,12 +52,7 @@ namespace LMDb.API.Omdb
             SearchResult result;
             if (ApiCall(url, out result))
             {
-                List<SearchEntry> entries = new List<SearchEntry>();
-                foreach (SearchEntry entry in result.Search)
-                    if (entries.All(p => p.imdbID != entry.imdbID))
-                        entries.Add(entry);
-
-                result.Search = entries.ToArray();
+                result.Search = result.Search.Distinct().ToArray();
             }
 
             return result;
@@ -183,6 +178,8 @@ namespace LMDb.API.Omdb
             var rawProperties = rawResult.GetType().GetProperties();
             foreach (var property in clearProperties.Where(p => rawProperties.Any(q => q.Name == p.Name)))
             {
+                if (Attribute.IsDefined(property, typeof (OmdbIgnoreNormalization)))
+                    continue;
                 if (rawProperties.Any(p => p.Name == property.Name && p.PropertyType == typeof(string)))
                 {
                     var rawProp = rawProperties.Single(p => p.Name == property.Name);
@@ -206,6 +203,23 @@ namespace LMDb.API.Omdb
                     }
                 }
             }
+            if (!String.IsNullOrWhiteSpace(rawResult.Year))
+            {
+                int year;
+                cleanResult.RawYear = rawResult.Year;
+                if (int.TryParse(rawResult.Year.TrimEnd("-".ToCharArray()), out year))
+                {
+                    cleanResult.Year = year;
+                }
+                else if (int.TryParse(rawResult.Year.Split(',').First(), out year))
+                {
+                    cleanResult.Year = year;
+                }
+                else if (int.TryParse(rawResult.Year.Split('-').First(), out year))
+                {
+                    cleanResult.Year = year;
+                }
+            }
             return cleanResult;
         }
 
@@ -217,11 +231,11 @@ namespace LMDb.API.Omdb
 
             if (defaultType.GetType() == typeof (List<string>))
             {
-                success = input.Split(new [] {", "}, StringSplitOptions.RemoveEmptyEntries).ToList();
+                success = input.Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries).Distinct().ToList();
                 return true;
             }
 
-            if (defaultType.GetType() == typeof (int))
+            if (defaultType is int)
             {
                 int i;
                 if (int.TryParse(input, NumberStyles.Any, new CultureInfo("en-US"), out i))
@@ -230,7 +244,7 @@ namespace LMDb.API.Omdb
                     return true;
                 }
             }
-            else if (defaultType.GetType() == typeof(float))
+            else if (defaultType is float)
             {
                 float f;
                 if (float.TryParse(input, NumberStyles.Any, new CultureInfo("en-US"), out f))
@@ -239,7 +253,7 @@ namespace LMDb.API.Omdb
                     return true;
                 }
             }
-            else if (defaultType.GetType() == typeof (DateTime))
+            else if (defaultType is DateTime)
             {
                 DateTime dt;
                 if (DateTime.TryParseExact(input, DateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out dt))
@@ -251,7 +265,7 @@ namespace LMDb.API.Omdb
             else if (defaultType.GetType() == typeof(Types.TomatoImages))
             {
                 Types.TomatoImages e;
-                if (Types.TomatoImages.TryParse(input, true, out e))
+                if (Enum.TryParse(input, true, out e))
                 {
                     success = e;
                     return true;
@@ -260,7 +274,7 @@ namespace LMDb.API.Omdb
             else if (defaultType.GetType() == typeof(Types.SearchType))
             {
                 Types.SearchType e;
-                if (Types.SearchType.TryParse(input, true, out e))
+                if (Enum.TryParse(input, true, out e))
                 {
                     success = e;
                     return true;

@@ -11,7 +11,7 @@ namespace LMDb.Db
     */
     class Art
     {
-        public int ArtId { get; set; }
+        public int ArtID { get; set; }
         public string WebPath { get; set; }
         public string CachePath { get; set; }
     }

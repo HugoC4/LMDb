@@ -14,5 +14,8 @@
     <Setting Name="SearchPaths" Type="System.String" Scope="User">
       <Value Profile="(Default)">D:\Data\Videos</Value>
     </Setting>
+    <Setting Name="PosterSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

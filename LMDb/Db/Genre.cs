@@ -9,11 +9,18 @@ namespace LMDb.Db
     /**
     *   Series object
     */
-    class Genre
+    class Genre : IContentLink
     {
-        public int GenreId { get; set; }
+        public Genre()
+        {
+            Movies = new List<Movie>();
+            Series = new List<Series>();
+            Episodes = new List<Episode>();
+        }
+        public int GenreID { get; set; }
         public string Name { get; set; }
-        public virtual List<Movie> Movies { get; set; }
-        public virtual List<Series> Series { get; set; }
+        public virtual ICollection<Movie> Movies { get; set; }
+        public virtual ICollection<Series> Series { get; set; }
+        public virtual ICollection<Episode> Episodes { get; set; }
     }
 }

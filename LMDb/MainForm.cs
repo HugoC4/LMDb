@@ -2,19 +2,25 @@
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
+using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Security.Cryptography;
 using System.Threading;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using LMDb.API.Omdb;
+using LMDb.Controls;
 using LMDb.Db;
 using LMDb.Properties;
+using LMDb.VideoNameParser;
 using MetroFramework;
 using MetroFramework.Components;
 using MetroFramework.Controls;
 using MetroFramework.Forms;
-using Vnp;
 
 namespace LMDb
 {
@@ -26,6 +32,19 @@ namespace LMDb
         public MainForm()
         {
             InitializeComponent();
+            mtcMainTabs.SelectTab(0);
+
+            switch (Settings.Default.PosterSize)
+            {
+                case 0:
+                    break;
+                case 720:
+                    break;
+                case 480:
+                    break;
+                case 1080:
+                    break;
+            }
 
             int i = -1;
             foreach (MetroThemeStyle e in Types.GetEnumList<MetroThemeStyle>())
@@ -57,6 +76,7 @@ namespace LMDb
 
             tlOverview.ColumnStyles.RemoveAt(0);
             tlOverview.ColumnCount = 0;
+
             Settings.Default.SearchableExtensions = Settings.Default.SearchableExtensions ?? new StringCollection();
             if (Settings.Default.SearchableExtensions.Count == 0)
             {
@@ -83,98 +103,12 @@ namespace LMDb
 
         private void scanningBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            this.Invoke(new Action(() =>
-            {
-                vcHome.SelectTab(0);
-            }));
-
-
-            ProgressState progress = new ProgressState();
-            progress.SetText(Resources.Loading_Library_CheckChanges);
-            scanningBackgroundWorker.ReportProgress(progress.Value, progress);
-
-            Thread.Sleep(1250);
-
-            List<string> files = new List<string>();
-            List<Movie> movies = new List<Movie>();
-            foreach (string file in FileSystem.GetFileTrees(Settings.Default.SearchPaths.Split(';'), scanningBackgroundWorker, progress))
-            {
-                files.Add(file);
-                string safeName = file.Substring(file.LastIndexOf(@"\") + 1);
-                InformationGuess guess = VideoNameParser.ParseName(safeName);
-                if (!guess.IsEpisode)
-                {
-                    if (!Program.Context.Movies.Any(p => p.Path == file))
-                    {
-                    
-                            Movie movie = new Movie();
-                            movie.Path = file;
-                            movie.Title = !String.IsNullOrWhiteSpace(guess.Title) ? guess.Title : safeName;
-                            movie.Year = guess.Year != 0 ? (int?)guess.Year : null;
-                            movie.Status = Types.ItemStatus.Unsynced;
-                            movies.Add(movie);
-                    }
-                }
-                
-            }
-
-            progress.IncrementValue(35).SetText(Resources.Loading_Library_Update_Database).EmptySubText();
-            scanningBackgroundWorker.ReportProgress(progress.Value, progress);
-
-            Program.Context.Movies.RemoveRange(Program.Context.Movies.Where(p => !files.Contains(p.Path)));
-            Program.Context.Movies.AddRange(movies);
-            Program.Context.SaveChanges();
-            Thread.Sleep(1250);
-
-            progress.IncrementValue(15).SetText(Resources.Loading_Library_Prepare_Homepage).EmptySubText();
-            scanningBackgroundWorker.ReportProgress(progress.Value, progress);
-
-            Thread.Sleep(1250);
-
-            
-
-            int i = 0;
-            float perc = 100 / (float)Program.Context.Movies.Count();
-            int percPerFile = (int)Math.Floor(((float)Program.Context.Movies.Count() / 50F) * 100);
-            foreach (Movie file in Program.Context.Movies.OrderBy(p => p.Title))
-            {
-                progress.IncrementValue(percPerFile).SetSubText("(" + i + "/" + Program.Context.Movies.Count() + " - " + file.Title + ")");
-                scanningBackgroundWorker.ReportProgress(progress.Value, progress);
-                PosterCard pc = new PosterCard();
-                pc.Text = file.Title;
-                pc.Dock = DockStyle.Fill;
-                this.Invoke(new Action(() =>
-                {
-                    tlOverview.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, perc));
-                    tlOverview.Controls.Add(pc, i, 0);
-                }));
-                i++;
-            }
-
-            progress.SetValue(100).SetText(Resources.Loading_Library_Complete).EmptySubText();
-            scanningBackgroundWorker.ReportProgress(progress.Value, progress);
-
-            Thread.Sleep(1250);
-
-            this.Invoke(new Action(() =>
-            {
-                vcHome.SelectTab(1);
-            }));
-
-            progress.ResetValue().EmptyText().EmptySubText();
-            scanningBackgroundWorker.ReportProgress(progress.Value, progress);
-            
+            Scan.BackgroundWorker.DoWork(sender, e, this);
         }
 
         private void scanningBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            ldHome.Value = e.ProgressPercentage;
-            if (e.UserState is ProgressState)
-            { 
-                ProgressState progress = (ProgressState) e.UserState;
-                ldHome.Text = progress.Text;
-                ldHome.SubText = progress.SubText;
-            }
+            Scan.BackgroundWorker.ProgressChanged(sender, e, this);
         }
 
         private void NavigationClicked(object sender, EventArgs e)

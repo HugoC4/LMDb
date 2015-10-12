@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Vnp
+namespace LMDb.VideoNameParser
 {
-    public static class VideoNameParser
+    public static class Parser
     {
-        public static InformationGuess ParseName(string name)
+        public static InformationGuess ParseName(string name, string path)
         {
             name = name.Replace(" - ", " ");
 
@@ -75,6 +75,7 @@ namespace Vnp
                 vid.EpisodeName = spaceIndex != -1 ? raw.Substring(0, spaceIndex).Trim() : raw.Trim();
             }
             vid.IsEpisode = vid.Season != 0 && vid.Episode != 0;
+            vid.Path = path;
             return vid;
         }
 

@@ -8,24 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using LMDb.Properties;
 
-namespace LMDb
+namespace LMDb.Scan
 {
     class FileSystem
     {
-        public static IEnumerable<string> GetFileTree(string directory, BackgroundWorker worker = null, ProgressState progress = null)
+        public static IEnumerable<string> GetFileTree(string directory)
         {
-            bool report = worker != null && progress != null;
-
             foreach (string ext in Settings.Default.SearchableExtensions)
             {
                 foreach (string s in GetFiles(directory, "*" + ext.ToLower()))
                 {
-                    string filename = s.Substring(s.LastIndexOf('\\') + 1);
-                    if (report)
-                    {
-                        progress.SetSubText("(" + filename + ")");
-                        worker.ReportProgress(progress.Value, progress);
-                    }
                     yield return s;
                 }
                 
@@ -33,12 +25,7 @@ namespace LMDb
 
             foreach (string s in GetDirectories(directory))
             {
-                if (report)
-                {
-                    progress.SetSubText("(" + s + ")");
-                    worker.ReportProgress(progress.Value, progress);
-                }
-                foreach (string f in GetFileTree(s, worker, progress))
+                foreach (string f in GetFileTree(s))
                 {
                     yield return f;
                 }
@@ -69,11 +56,11 @@ namespace LMDb
             }
         }
 
-        public static IEnumerable<string> GetFileTrees(string[] directories, BackgroundWorker worker = null, ProgressState progress = null)
+        public static IEnumerable<string> GetFileTrees(string[] directories)
         {
             foreach (string path in directories)
             {
-                foreach (string file in GetFileTree(path, worker, progress))
+                foreach (string file in GetFileTree(path))
                     yield return file;
             }
 

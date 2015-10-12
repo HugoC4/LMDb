@@ -128,6 +128,15 @@ namespace LMDb.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Retrieving IMDB information....
+        /// </summary>
+        internal static string Loading_Library_RetrieveImdbInfo {
+            get {
+                return ResourceManager.GetString("Loading_Library_RetrieveImdbInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Saving Changes....
         /// </summary>
         internal static string Loading_Library_Update_Database {

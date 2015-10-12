@@ -34,7 +34,8 @@ namespace LMDb
             Conflicted,
             Synced,
             Unsynced,
-            Ignored
+            Ignored,
+            Deleted
         }
 
         public enum SearchType

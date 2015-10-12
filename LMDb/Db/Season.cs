@@ -11,7 +11,14 @@ namespace LMDb.Db
     */
     class Season
     {
-        public int SeasonId { get; set; }
-        public virtual List<Episode>  Episodes { get; set; }
+        public Season()
+        {
+            Episodes = new List<Episode>();
+        }
+
+        public int SeasonID { get; set; }
+        public int? SeasonIndex { get; set; }
+        public virtual ICollection<Episode> Episodes { get; set; }
+        public virtual Series Series { get; set; }
     }
 }

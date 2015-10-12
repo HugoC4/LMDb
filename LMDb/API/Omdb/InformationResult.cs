@@ -11,7 +11,12 @@ namespace LMDb.API.Omdb
     public class InformationResult
     {
         public string Title { get; set; }
-        public string Year { get; set; }
+
+        [OmdbIgnoreNormalization]
+        public int? Year { get; set; }
+
+        [OmdbIgnoreNormalization]
+        public string RawYear { get; set; }
         public int? Episode { get; set; }
         public int? Season { get; set; }
         public string Rated { get; set; }
@@ -41,7 +46,7 @@ namespace LMDb.API.Omdb
         public string tomatoConsensus { get; set; }
         public int? tomatoUserMeter { get; set; }
         public float? tomatoUserRating { get; set; }
-        public string tomatoUserReviews { get; set; }
+        public int? tomatoUserReviews { get; set; }
 
         public DateTime? DVD { get; set; }
         public string BoxOffice { get; set; }

@@ -69,5 +69,17 @@ namespace LMDb.Properties {
                 this["SearchPaths"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int PosterSize {
+            get {
+                return ((int)(this["PosterSize"]));
+            }
+            set {
+                this["PosterSize"] = value;
+            }
+        }
     }
 }

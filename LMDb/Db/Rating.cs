@@ -9,11 +9,18 @@ namespace LMDb.Db
     /**
     *   Series object
     */
-    class Rating
+    class Rating : IContentLink
     {
-        public int RatingId { get; set; }
+        public Rating()
+        {
+            Movies = new List<Movie>();
+            Series = new List<Series>();
+            Episodes = new List<Episode>();
+        }
+        public int RatingID { get; set; }
         public string Name { get; set; }
-        public virtual List<Movie> Movies { get; set; }
-        public virtual List<Series> Series { get; set; }
+        public virtual ICollection<Movie> Movies { get; set; }
+        public virtual ICollection<Series> Series { get; set; }
+        public virtual ICollection<Episode> Episodes { get; set; }
     }
 }

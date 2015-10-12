@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using LMDb.Controls;
 
 namespace LMDb
 {
@@ -34,7 +35,7 @@ namespace LMDb
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mtcMainTabs = new MetroFramework.Controls.MetroTabControl();
             this.mtHome = new MetroFramework.Controls.MetroTabPage();
-            this.vcHome = new LMDb.ViewControl();
+            this.vcHome = new LMDb.Controls.ViewControl();
             this.vcpLoadingScreen = new MetroFramework.Controls.MetroTabPage();
             this.ldHome = new LMDb.LoadingScreen();
             this.vcpOverview = new MetroFramework.Controls.MetroTabPage();
@@ -47,12 +48,17 @@ namespace LMDb
             this.mllFiles = new MetroFramework.Controls.MetroLink();
             this.mllAppearance = new MetroFramework.Controls.MetroLink();
             this.mlCategories = new MetroFramework.Controls.MetroLabel();
-            this.vcSettings = new LMDb.ViewControl();
+            this.vcSettings = new LMDb.Controls.ViewControl();
             this.mtpSettingsGeneral = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.mtpSettingsFiles = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.mtpSettingsAppearance = new MetroFramework.Controls.MetroTabPage();
+            this.mrbPoster1080 = new MetroFramework.Controls.MetroRadioButton();
+            this.mrbPoster720 = new MetroFramework.Controls.MetroRadioButton();
+            this.mrbPoster480 = new MetroFramework.Controls.MetroRadioButton();
+            this.mrbPosterDefault = new MetroFramework.Controls.MetroRadioButton();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.mbChangeImage = new MetroFramework.Controls.MetroButton();
             this.pbProfileSettings = new System.Windows.Forms.PictureBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -244,6 +250,11 @@ namespace LMDb
             // 
             // mtpSettingsAppearance
             // 
+            this.mtpSettingsAppearance.Controls.Add(this.mrbPoster1080);
+            this.mtpSettingsAppearance.Controls.Add(this.mrbPoster720);
+            this.mtpSettingsAppearance.Controls.Add(this.mrbPoster480);
+            this.mtpSettingsAppearance.Controls.Add(this.mrbPosterDefault);
+            this.mtpSettingsAppearance.Controls.Add(this.metroLabel4);
             this.mtpSettingsAppearance.Controls.Add(this.mbChangeImage);
             this.mtpSettingsAppearance.Controls.Add(this.pbProfileSettings);
             this.mtpSettingsAppearance.Controls.Add(this.metroLabel3);
@@ -255,6 +266,39 @@ namespace LMDb
             resources.ApplyResources(this.mtpSettingsAppearance, "mtpSettingsAppearance");
             this.mtpSettingsAppearance.Name = "mtpSettingsAppearance";
             this.mtpSettingsAppearance.VerticalScrollbarBarColor = true;
+            // 
+            // mrbPoster1080
+            // 
+            resources.ApplyResources(this.mrbPoster1080, "mrbPoster1080");
+            this.mrbPoster1080.Name = "mrbPoster1080";
+            this.mrbPoster1080.TabStop = true;
+            this.mrbPoster1080.UseVisualStyleBackColor = true;
+            // 
+            // mrbPoster720
+            // 
+            resources.ApplyResources(this.mrbPoster720, "mrbPoster720");
+            this.mrbPoster720.Name = "mrbPoster720";
+            this.mrbPoster720.TabStop = true;
+            this.mrbPoster720.UseVisualStyleBackColor = true;
+            // 
+            // mrbPoster480
+            // 
+            resources.ApplyResources(this.mrbPoster480, "mrbPoster480");
+            this.mrbPoster480.Name = "mrbPoster480";
+            this.mrbPoster480.TabStop = true;
+            this.mrbPoster480.UseVisualStyleBackColor = true;
+            // 
+            // mrbPosterDefault
+            // 
+            resources.ApplyResources(this.mrbPosterDefault, "mrbPosterDefault");
+            this.mrbPosterDefault.Name = "mrbPosterDefault";
+            this.mrbPosterDefault.TabStop = true;
+            this.mrbPosterDefault.UseVisualStyleBackColor = true;
+            // 
+            // metroLabel4
+            // 
+            resources.ApplyResources(this.metroLabel4, "metroLabel4");
+            this.metroLabel4.Name = "metroLabel4";
             // 
             // mbChangeImage
             // 
@@ -351,13 +395,13 @@ namespace LMDb
         private MetroFramework.Controls.MetroTabControl mtcMainTabs;
         private MetroFramework.Controls.MetroTabPage mtSettings;
         private MetroFramework.Controls.MetroTabPage mtHome;
-        private TableLayoutPanel tlOverview;
+        public TableLayoutPanel tlOverview;
         private Timer resizeTimer;
-        private LoadingScreen ldHome;
-        private ViewControl vcHome;
+        public LoadingScreen ldHome;
+        public ViewControl vcHome;
         private MetroFramework.Controls.MetroTabPage vcpLoadingScreen;
         private MetroFramework.Controls.MetroTabPage vcpOverview;
-        private System.ComponentModel.BackgroundWorker scanningBackgroundWorker;
+        public System.ComponentModel.BackgroundWorker scanningBackgroundWorker;
         private TableLayoutPanel tlSettings;
         private MetroFramework.Controls.MetroPanel mpSettingsCategories;
         private MetroFramework.Controls.MetroLabel mlCategories;
@@ -379,5 +423,10 @@ namespace LMDb
         private MetroFramework.Controls.MetroButton mbChangeImage;
         private PictureBox pbProfileSettings;
         private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroRadioButton mrbPoster1080;
+        private MetroFramework.Controls.MetroRadioButton mrbPoster720;
+        private MetroFramework.Controls.MetroRadioButton mrbPoster480;
+        private MetroFramework.Controls.MetroRadioButton mrbPosterDefault;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
     }
 }

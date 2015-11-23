@@ -9,7 +9,8 @@ namespace LMDb.Db
     /**
     *   Series object
     */
-    class Director : IContentLink
+
+    public class Director : IContentLink
     {
         public Director()
         {

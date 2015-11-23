@@ -9,7 +9,7 @@ namespace LMDb.Db
     /**
     *   Series object
     */
-    class Rating : IContentLink
+    public class Rating : IContentLink
     {
         public Rating()
         {

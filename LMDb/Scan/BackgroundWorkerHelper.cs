@@ -16,7 +16,7 @@ using LMDb.VideoNameParser;
 
 namespace LMDb.Scan
 {
-    abstract class BackgroundWorkerHelper
+    public class BackgroundWorkerHelper
     {
         protected static List<string> ScanLibrary()
         {
@@ -119,18 +119,28 @@ namespace LMDb.Scan
             Program.Context.SaveChanges();
         }
 
-        public static void UpdateArtCache()
+        public static void UpdateArtCache(Types.PosterWidth pWidth, MainForm form, ProgressState progress)
         {
+            int width = Types.GetPosterWidthByEnum(pWidth);
+            int i = 0;
+            int count = Program.Context.Movies.Count(p => p.Status == Types.ItemStatus.Synced);
             foreach (Movie file in Program.Context.Movies.Include(p => p.Art).Where(p => p.Status == Types.ItemStatus.Synced))
             {
-                if (file.Art?.WebPath != null && (file.Art.CachePath == null || !Directory.Exists(file.Art.CachePath)))
+                progress.SetSubText("(" + ((++i) + 1) + "/" + count + ") " + file.Title);
+                form.scanningBackgroundWorker.ReportProgress(progress.Value, progress);
+                if (file.Art?.WebPath != null && (file.Art.CachePath == null || !File.Exists(file.Art.CachePath) || file.Art.Quality != pWidth))
                 {
+                    if (File.Exists(file.Art.CachePath))
+                    {
+                        File.Delete(file.Art.CachePath);
+                    }
                     using (WebClient webClient = new WebClient())
                     {
+                        file.Art.Quality = pWidth;
                         try
                         {
                             string url = Program.ImageCacheUrl + @"\" + file.Art.WebPath.GetHashCode() + ".jpg";
-                            webClient.DownloadFile(file.Art.WebPath.Replace("V1_SX300.jpg", "V1_SX480.jpg"), url);
+                            webClient.DownloadFile(file.Art.WebPath.Replace("V1_SX300.jpg", $"V1_SX{width}.jpg"), url);
                             file.Art.CachePath = url;
                         }
                         catch (Exception)
@@ -143,10 +153,10 @@ namespace LMDb.Scan
             Program.Context.SaveChanges();
         }
 
-        public static void UpdateGUI(MainForm form, ProgressState progress)
+        public static void UpdateGUI(MainForm form, ProgressState progress = null)
         {
             int i = 0;
-            int count = Program.Context.Movies.Count(p => p.Status == Types.ItemStatus.Synced);
+            int count = Program.Context.Movies.Distinct().Count();
             float perc = 100 / (float)count;
             foreach (Movie file in Program.Context.Movies.Where(p => p.Status == Types.ItemStatus.Synced).OrderBy(p => p.Title).Include(p => p.Art).Include(p => p.Genres))
             {
@@ -155,15 +165,26 @@ namespace LMDb.Scan
 
                 form.Invoke(new Action(() =>
                 {
-                    PosterCard pc = new PosterCard();
-                    pc.Title = file.Title;
+
+                    PosterCard pc = form.MovieCards.ContainsKey(file.ImdbId) ? form.MovieCards[file.ImdbId] : new PosterCard();
+                    
+                    pc.Title = file.Title + (file.Year.HasValue ? $" ({file.Year.Value})" : "");
                     pc.Synopsis = file.Plot;
                     pc.Genres = "Genres: " + string.Join(", ", file.Genres.Select(p => p.Name));
-                    pc.Dock = DockStyle.Fill;
+                    pc.Rating = "Rating: " + (file.Rating?.Name);
+                    
                     if (!string.IsNullOrWhiteSpace(file.Art?.CachePath))
                         pc.Image = Bitmap.FromFile(file.Art.CachePath);
-                    form.tlOverview.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, perc));
-                    form.tlOverview.Controls.Add(pc, i++, 0);
+
+                    if (!form.MovieCards.ContainsKey(file.ImdbId))
+                    {
+                        pc.Dock = DockStyle.Fill;
+                        form.tlOverview.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, perc));
+                        form.tlOverview.Controls.Add(pc, i++, 0);
+                        form.MovieCards.Add(file.ImdbId, pc);
+                    }
+                    pc.Movie = file;
+                    pc.CustomClick += form.Poster_click;
                 }));
             }
         }

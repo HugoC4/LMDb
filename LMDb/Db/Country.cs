@@ -9,7 +9,8 @@ namespace LMDb.Db
     /**
     *   Series object
     */
-    class Country : IContentLink
+
+    public class Country : IContentLink
     {
         public Country()
         {

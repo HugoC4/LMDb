@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LMDb.Scan
 {
-    class ProgressState
+    public class ProgressState
     {
         public int Value { get; set; } = 0;
         public string Text { get; set; } = String.Empty;

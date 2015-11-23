@@ -10,7 +10,8 @@ namespace LMDb.Db
     /**
     *   Series object
     */
-    class Actor : IContentLink
+
+    public class Actor : IContentLink
     {
         public Actor()
         {

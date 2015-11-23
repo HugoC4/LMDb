@@ -13,7 +13,7 @@ namespace LMDb.Db
     /**
     *   Movie object
     */
-    class Movie : Content
+    public class Movie : Content
     {
         public int MovieID { get; set; }
 
@@ -85,7 +85,6 @@ namespace LMDb.Db
                 return null;
 
             T t;
-            var aaaaaaa = set.ToList();
             if (set.Any(p => p.Name.Equals(value, StringComparison.OrdinalIgnoreCase)))
             {
                 t = set.Single(p => p.Name.Equals(value, StringComparison.OrdinalIgnoreCase));

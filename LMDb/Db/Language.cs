@@ -9,7 +9,8 @@ namespace LMDb.Db
     /**
     *   Language object
     */
-    class Language : IContentLink
+
+    public class Language : IContentLink
     {
         public Language()
         {

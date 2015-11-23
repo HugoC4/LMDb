@@ -9,7 +9,8 @@ namespace LMDb.Db
     /**
     *   Episode object
     */
-    class Season
+
+    public class Season
     {
         public Season()
         {

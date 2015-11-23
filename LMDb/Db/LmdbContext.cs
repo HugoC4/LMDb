@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace LMDb.Db
 {
+    [DbConfigurationType(typeof(LmdbDbConfig))]
     class LmdbContext : DbContext
     {
         public DbSet<Art> Art { get; set; }

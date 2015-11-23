@@ -31,7 +31,7 @@ namespace LMDb.Controls
         protected override void WndProc(ref Message m)
         {
             // Hide the tab headers at run-time
-            if (m.Msg == TCM_ADJUSTRECT && !DesignMode)
+            if (!DesignMode && m.Msg == TCM_ADJUSTRECT && !DesignMode)
             {
                 m.Result = (IntPtr)1;
                 return;

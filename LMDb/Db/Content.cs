@@ -13,7 +13,7 @@ namespace LMDb.Db
     *   Content object (Unidentified files)
     */
 
-    internal class Content
+    public class Content
     {
         protected Content()
         {

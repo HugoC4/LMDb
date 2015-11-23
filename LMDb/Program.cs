@@ -24,6 +24,7 @@ namespace LMDb
         public static string BaseUrl = AppDomain.CurrentDomain.BaseDirectory;
         public static string CacheUrl = BaseUrl + @"\cache";
         public static string ImageCacheUrl = CacheUrl + @"\img";
+        public static string DateFormat = "dd-mm-YYYY";
 
         /// <summary>
         /// The main entry point for the application.
@@ -42,13 +43,6 @@ namespace LMDb
 
             CreateCacheFolders();
             Application.Run(new MainForm());
-
-            while (6<9)
-                using (var writer = new XmlTextWriter(@"D:\Model.edmx", Encoding.Default))
-                {
-                    EdmxWriter.WriteEdmx(Context, writer);
-                };
-
         }
 
         public static void CreateCacheFolders()

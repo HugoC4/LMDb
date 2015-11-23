@@ -49,7 +49,7 @@ namespace LMDb.Controls
             // Poster
             // 
             this.Poster.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Poster.Image = global::LMDb.Properties.Resources.a1;
+            this.Poster.Image = global::LMDb.Properties.Resources.poster_placeholder;
             this.Poster.Location = new System.Drawing.Point(0, 0);
             this.Poster.Margin = new System.Windows.Forms.Padding(4);
             this.Poster.Name = "Poster";
@@ -158,9 +158,6 @@ namespace LMDb.Controls
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "PosterCard";
             this.Size = new System.Drawing.Size(373, 614);
-            this.MouseEnter += new System.EventHandler(this.PosterCard_MouseEnter);
-            this.MouseLeave += new System.EventHandler(this.PosterCard_MouseLeave);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PosterCard_MouseMove);
             this.Resize += new System.EventHandler(this.PosterCard_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.Poster)).EndInit();
             this.mpInfo.ResumeLayout(false);

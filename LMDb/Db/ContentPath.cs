@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using LMDb.VideoNameParser;
 
 namespace LMDb.Db
 {
-    class ContentPath
+    public class ContentPath
     {
         public int ContentPathID { get; set; }
         public string Path { get; set; }
@@ -28,6 +29,11 @@ namespace LMDb.Db
                 Quality = guess.Quality,
                 Resolution = guess.Resolution
             };
+        }
+
+        public override string ToString()
+        {
+            return ((Resolution ?? Quality ?? Codec) + " " + (Extended ? "EXTENDED" : "")).Trim(' ') + " " + Path;
         }
     }
 }

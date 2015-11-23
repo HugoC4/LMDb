@@ -61,46 +61,6 @@ namespace LMDb.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap a {
-            get {
-                object obj = ResourceManager.GetObject("a", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap a1 {
-            get {
-                object obj = ResourceManager.GetObject("a1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap b {
-            get {
-                object obj = ResourceManager.GetObject("b", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap c {
-            get {
-                object obj = ResourceManager.GetObject("c", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Checking Your Library for Changes....
         /// </summary>
         internal static string Loading_Library_CheckChanges {
@@ -128,11 +88,56 @@ namespace LMDb.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Creating Cache Folders....
+        /// </summary>
+        internal static string Loading_Library_Prepare_Homepage_Folders {
+            get {
+                return ResourceManager.GetString("Loading_Library_Prepare_Homepage_Folders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Retrieving IMDB information....
         /// </summary>
         internal static string Loading_Library_RetrieveImdbInfo {
             get {
                 return ResourceManager.GetString("Loading_Library_RetrieveImdbInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating Art Cache....
+        /// </summary>
+        internal static string Loading_Library_Update_Cache {
+            get {
+                return ResourceManager.GetString("Loading_Library_Update_Cache", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Art Cache Updated!.
+        /// </summary>
+        internal static string Loading_Library_Update_Cache_Complete {
+            get {
+                return ResourceManager.GetString("Loading_Library_Update_Cache_Complete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updating GUI....
+        /// </summary>
+        internal static string Loading_Library_Update_Cache_GUI {
+            get {
+                return ResourceManager.GetString("Loading_Library_Update_Cache_GUI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GUI Updated!.
+        /// </summary>
+        internal static string Loading_Library_Update_Cache_GUI_Complete {
+            get {
+                return ResourceManager.GetString("Loading_Library_Update_Cache_GUI_Complete", resourceCulture);
             }
         }
         
@@ -148,10 +153,19 @@ namespace LMDb.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap mask {
+        internal static System.Drawing.Bitmap poster_placeholder {
             get {
-                object obj = ResourceManager.GetObject("mask", resourceCulture);
+                object obj = ResourceManager.GetObject("poster_placeholder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         

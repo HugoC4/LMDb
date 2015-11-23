@@ -9,10 +9,12 @@ namespace LMDb.Db
     /**
     *   Art object
     */
-    class Art
+
+    public class Art
     {
         public int ArtID { get; set; }
         public string WebPath { get; set; }
         public string CachePath { get; set; }
+        public Types.PosterWidth Quality { get; set; }
     }
 }

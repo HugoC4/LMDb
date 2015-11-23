@@ -9,7 +9,8 @@ namespace LMDb.Db
     /**
     *   Series object
     */
-    class Writer : IContentLink
+
+    public class Writer : IContentLink
     {
         public Writer()
         {

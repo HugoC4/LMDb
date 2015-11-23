@@ -9,7 +9,8 @@ namespace LMDb.Db
     /**
     *   Series object
     */
-    class Genre : IContentLink
+
+    public class Genre : IContentLink
     {
         public Genre()
         {

@@ -9,7 +9,8 @@ namespace LMDb.Db
     /**
     *   Series object
     */
-    class Producer : IContentLink
+
+    public class Producer : IContentLink
     {
         public Producer()
         {

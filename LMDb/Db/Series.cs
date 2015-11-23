@@ -10,7 +10,8 @@ namespace LMDb.Db
     /**
     *   Series object
     */
-    class Series : Content
+
+    public class Series : Content
     {
         public Series()
         {

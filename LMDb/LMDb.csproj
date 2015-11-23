@@ -41,6 +41,14 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
       <Private>True</Private>
@@ -81,9 +89,12 @@
     <Compile Include="API\Omdb\Omdb.cs" />
     <Compile Include="API\Omdb\SearchEntry.cs" />
     <Compile Include="API\Omdb\SearchResult.cs" />
+    <Compile Include="API\OpenSubtitles\OpenSubtitles.cs" />
+    <Compile Include="API\OpenSubtitles\Subtitle.cs" />
     <Compile Include="Db\ContentPath.cs" />
     <Compile Include="Db\LmdbContext.cs" />
     <Compile Include="Db\IContentLink.cs" />
+    <Compile Include="Db\LmdbDbConfig.cs" />
     <Compile Include="Db\Season.cs" />
     <Compile Include="Db\Language.cs" />
     <Compile Include="Db\Rating.cs" />

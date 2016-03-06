@@ -39,7 +39,7 @@ namespace LMDb
             
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<LmdbContext, Configuration>());
             Context = new LmdbContext();
-            //Context.Database.Delete();
+            Context.Database.Delete();
 
             CreateCacheFolders();
             Application.Run(new MainForm());
